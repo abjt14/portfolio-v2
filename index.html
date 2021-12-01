@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>abjt</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+	<style>
+		html {
+			min-height: 100vh;
+			width: 100%;
+			max-width: 100vw;
+			scroll-behavior: smooth;
+			font-size: 100%;
+			overscroll-behavior: none;
+			-webkit-overscroll-behavior: none;
+			-moz-overscroll-behavior: none;
+		}
+
+		body {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			max-width: 100vw;
+			overflow-x: hidden;
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+			overscroll-behavior: none;
+			-webkit-overscroll-behavior: none;
+			-moz-overscroll-behavior: none;
+		}
+
+		body.loading {
+			overflow: hidden;
+		}
+
+		#loader-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100vw;
+			background-color: #fff;
+			z-index: -999;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.5s ease;
+		}
+
+		body.loading>#loader-overlay {
+			opacity: 1;
+			z-index: 999;
+		}
+	</style>
+	<script>
+	</script>
+</head>
+
+<body class="loading">
+	<div id="loader-overlay"></div>
+	<div id="bg"></div>
+	<div id="customouse">
+		<div id="pointer">
+			<div id="pointer-content" class="visible">
+				<div id="dot"></div>
+			</div>
+		</div>
+	</div>
+	<div class="hot-corner hc-top-left">
+		<button id="go-to-top" class="gsap-hc" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+			ABHIJEET SINGH
+		</button>
+	</div>
+	<div class="hot-corner-absolute hc-top-right">
+		<div id="portfolio-text" class="gsap-hc">
+			PORTFOLIO@21
+		</div>
+	</div>
+	<div class="hot-corner hc-bottom-right">
+		<div class="gsap-hc">
+			<a id="go-to-projects" href="#projects">
+				SCROLL ↓
+			</a>
+		</div>
+	</div>
+	<div id="main">
+		<div class="cont" id="cont-1">
+			<h1 class="title">
+				<span>
+					<span>Developer</span>
+					based
+				</span>
+				<span>in Vancouver</span>
+			</h1>
+			<h1 class="mobile-title">
+				<span>Developer</span>
+				based in Vancouver
+			</h1>
+			<div class="content">
+				<h2 class="sub-title">
+					I build engaging experiences for my audience with pixel-perfect and performant applications.
+				</h2>
+				<div id="cta-btn-cont">
+					<a id="cta-btn" href="mailto:abhijeetsinghmain@gmail.com">
+						<div id="cta-emoji">👋</div>
+						<span id="cta-text">Say Hi!</span>
+						<img id="cta-foreground" src="./src/images/cta-btn/foreground.svg" alt="">
+					</a>
+				</div>
+				<div class="desktop-filler" style="flex: 3;"></div>
+			</div>
+		</div>
+		<div class="cont" id="projects">
+			<div class="content">
+				<div class="listing">
+					<a href="https://siftapp.ca" target="_blank" class="item">
+						<div class="number">01</div>
+						<div class="name">
+							Sift App
+							<div class="technologies">
+								<div class="techname">React Native</div>
+								<div class="techname">NodeJS</div>
+								<div class="techname">GraphQL</div>
+							</div>
+						</div>
+					</a>
+					<a href="https://siftapp.ca" target="_blank" class="item">
+						<div class="number">02</div>
+						<div class="name">
+							Sift Marketing Website
+							<div class="technologies">
+								<div class="techname">SASS</div>
+								<div class="techname">GSAP</div>
+								<div class="techname">Webpack</div>
+							</div>
+						</div>
+					</a>
+					<a href="https://abjt14.github.io/kanye-unsplash/" target="_blank" class="item">
+						<div class="number">03</div>
+						<div class="name">
+							Ye Unsplash
+							<div class="technologies">
+								<div class="techname">JavaScript</div>
+							</div>
+						</div>
+					</a>
+					<a href="https://play-rock-paper-scissors.herokuapp.com/" target="_blank" class="item">
+						<div class="number">04</div>
+						<div class="name">
+							Rock Paper Scissors
+							<div class="technologies">
+								<div class="techname">JavaScript</div>
+								<div class="techname">NodeJS</div>
+								<div class="techname">Heroku</div>
+							</div>
+						</div>
+					</a>
+					<a href="https://codepen.io/abjt14" target="_blank" class="item">
+						<div class="number">05</div>
+						<div class="name">
+							More on Codepen
+							<div class="technologies">
+								<div class="techname">CSS</div>
+								<div class="techname">JavaScript</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="display">
+					<div class="title">
+						<span>Projects</span> <br class="desktop-only">and<br class="desktop-only"> <span>Experiments</span>
+					</div>
+				</div>
+				<div id="projects-img-cont">
+					<img src="#" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="contact">
+		<div class="text">
+			<div class="greeting gsap-parallax">
+				<span id="greeting-text">Hello</span><span id="greeting-exclaim">!</span>
+			</div>
+			<div class="text">
+				<div class="title gsap-parallax">
+					I'm Abhijeet. Vancouver based developer who loves to add creativity and life into his work.
+				</div>
+				<div class="desc gsap-parallax">
+					I have a Bachelor's degree and a PG diploma in my field and have worked as a software engineer for over an
+					year.
+					My go-to tech stack is <span>Vanilla JavaScript</span> and <span>Sass</span> with <span>Webpack</span> for my
+					projects.<br><br>
+					Other technologies and tools I have recently used are <span>Figma</span>, <span>Canvas API</span>,
+					<span>React</span>, <span>React Native</span>, <span>GSAP</span>, <span>Node.js</span>, <span>GraphQL</span>,
+					<span>MongoDB</span>, and <span>Shell Scripting</span>.
+				</div>
+			</div>
+			<div class="social-links">
+				<a href="mailto:abhijeetsinghmain@gmail.com" target="_blank" class="gsap-parallax">
+					GET IN TOUCH <span>&#8599;</span>
+				</a>
+				<a href="https://github.com/abjt14" target="_blank" class="gsap-parallax">
+					GITHUB <span>&#8599;</span>
+				</a>
+				<a href="https://linkedin.com/in/abjt14" target="_blank" class="gsap-parallax">
+					LINKEDIN <span>&#8599;</span>
+				</a>
+				<a href="https://codepen.io/abjt14" target="_blank" class="gsap-parallax">
+					CODEPEN <span>&#8599;</span>
+				</a>
+			</div>
+		</div>
+		<div class="image">
+			<img class="gsap-parallax" id="profile-image" src="https://source.unsplash.com/random/700x700" alt="">
+		</div>
+	</div>
+	<script src="./dist/bundle.js"></script>
+	<script>
+		window.addEventListener('DOMContentLoaded', (e) => {
+			document.body.classList.remove('loading')
+			document.querySelector('#cont-1').style.height = `${window.innerHeight}px`
+		});
+
+		window.addEventListener('resize', (e) => {
+			document.querySelector('#cont-1').style.height = `${window.innerHeight}px`
+		})
+	</script>
+</body>
+
+</html>

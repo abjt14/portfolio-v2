@@ -1,0 +1,176 @@
+$titleFontFamily: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$titleFontSize: 11rem;
+
+$subTitleFontFamily: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$subTitleFontSize: 1.5rem;
+
+$ctaButtonFontSize: 1.5rem;
+
+&#cont-1 {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 2vh;
+	transition: height 1s ease-out;
+
+	.title {
+		flex: 2;
+		font-size: $titleFontSize;
+		font-family: $titleFontFamily;
+		font-weight: 800;
+		line-height: 1;
+		letter-spacing: -0.8rem;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		span {
+			will-change: transform, opacity;
+
+			span {
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-image: linear-gradient(90deg, #0077e7, #01d8d1);
+				filter: hue-rotate(0deg);
+				animation: hueShift 6s infinite linear 1s;
+
+				@keyframes hueShift {
+					0% {
+						filter: hue-rotate(0deg);
+					}
+
+					100% {
+						filter: hue-rotate(360deg);
+					}
+				}
+			}
+		}
+
+		span:last-child {
+			text-align: right;
+		}
+
+		@media only screen and (max-width: 640px) {
+			display: none;
+		}
+	}
+
+	.mobile-title {
+		font-size: $titleFontSize;
+		font-family: $titleFontFamily;
+		font-weight: 800;
+		line-height: 1;
+		letter-spacing: -0.6rem;
+
+		span {
+			will-change: transform, opacity;
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(90deg, #0077e7, #01d8d1);
+			filter: hue-rotate(0deg);
+			animation: hueShift 6s infinite linear 1s;
+
+			@keyframes hueShift {
+				0% {
+					filter: hue-rotate(0deg);
+				}
+
+				100% {
+					filter: hue-rotate(360deg);
+				}
+			}
+		}
+
+		@media only screen and (max-width: 640px) {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			font-size: 7rem;
+			transform: translateY(3rem);
+			text-align: center;
+		}
+
+		@media only screen and (min-width: 640px) {
+			display: none;
+		}
+	}
+
+	.content {
+		flex: 1;
+    padding-bottom: 6%;
+		display: flex;
+		gap: 2rem;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.sub-title {
+			font-size: $subTitleFontSize;
+			font-weight: 300;
+			width: 100%;
+			font-family: $subTitleFontFamily;
+			flex: 3;
+
+			@media only screen and (max-width: 640px) {
+				flex: 2;
+			}
+		}
+
+		#cta-btn-cont {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 1;
+
+			a#cta-btn {
+				text-decoration: none;
+				color: #000;
+				padding: 1.25rem;
+				display: flex;
+				gap: .5rem;
+				align-items: center;
+				justify-content: center;
+				border-radius: 2px;
+				font-weight: 500;
+				position: relative;
+				opacity: 1;
+				flex: 1;
+				font-size: $ctaButtonFontSize;
+
+				img#cta-foreground {
+					position: absolute;
+					height: 100%;
+					width: 0;
+					left: 0;
+					top: 0;
+					object-fit: cover;
+					border-radius: 2px;
+					box-shadow: '0px 0px 0px 1.5px #000'
+				}
+
+				#cta-text {
+					opacity: 1;
+				}
+			}
+		}
+
+		.desktop-filler {
+			@media only screen and (max-width: 640px) {
+				display: none;
+			}
+		}
+
+		@media only screen and (max-width: 640px) {
+			flex: none;
+		}
+	}
+
+	@media only screen and (max-width: 640px) {
+		min-height: 85vh;
+	}
+}

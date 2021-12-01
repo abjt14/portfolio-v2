@@ -1,0 +1,160 @@
+$padding: 3%;
+$fontColor: #000000;
+$fontFamily: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$fontSize: 1.15rem;
+
+.hot-corner {
+	position: fixed;
+	padding: $padding;
+	color: $fontColor;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	z-index: 100;
+
+	&.hc-top-left {
+		top: 0;
+		left: 0;
+	}
+
+	&.hc-bottom-right {
+		bottom: 0;
+		right: 0;
+
+		#scroll-clue {
+			text-align: right;
+		}
+	}
+
+	button {
+		cursor: pointer;
+		color: $fontColor;
+		font-family: $fontFamily;
+		font-size: $fontSize;
+		transition: filter .5s ease-out;
+		position: relative;
+		overflow-y: hidden;
+	}
+
+	a {
+		color: $fontColor;
+		font-family: $fontFamily;
+		font-size: $fontSize;
+		text-decoration: none;
+		transition: filter .5s ease-out;
+		position: relative;
+		overflow-y: hidden;
+		display: block;
+	}
+}
+
+.hot-corner-absolute {
+	position: absolute;
+	padding: $padding;
+	color: $fontColor;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	z-index: 100;
+
+	&.hc-top-right {
+		top: 0;
+		right: 0;
+	}
+
+	button {
+		cursor: pointer;
+		color: $fontColor;
+		font-family: $fontFamily;
+		font-size: $fontSize;
+		transition: filter .5s ease-out;
+		position: relative;
+		overflow-y: hidden;
+	}
+
+	a {
+		color: $fontColor;
+		font-family: $fontFamily;
+		font-size: $fontSize;
+		text-decoration: none;
+		transition: filter .5s ease-out;
+		position: relative;
+		overflow-y: hidden;
+		display: block;
+	}
+}
+
+.hc-hide {
+	filter: blur(25px);
+	pointer-events: none;
+}
+
+#go-to-top {
+	color: transparent;
+
+	&:before, &:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		color: $fontColor !important;
+		transition: transform .6s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	&:before {
+		content: 'ABHIJEET SINGH';
+	}
+
+	&:after {
+		content: 'GO TO TOP';
+    text-align: left;
+		transform: translateY(100%);
+	}
+
+	&:hover {
+		&:before{
+			transform: translateY(-100%);
+		}
+		&:after {
+			transform: translateY(0%);
+		}
+	}
+}
+
+#go-to-projects {
+	color: transparent;
+	padding-left: 4rem;
+
+	&:before, &:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: max-content;
+		color: $fontColor !important;
+		transition: transform .6s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	&:before {
+		content: 'SCROLL ↓';
+	}
+
+	&:after {
+		content: 'GO TO PROJECTS';
+    text-align: right;
+		transform: translateY(100%);
+	}
+
+	&:hover {
+		&:before{
+			transform: translateY(-100%);
+		}
+		&:after {
+			transform: translateY(0%);
+		}
+	}
+
+	@media only screen and (max-width: 640px) {
+		display: none;
+	}
+}

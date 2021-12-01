@@ -1,0 +1,11 @@
+#main {
+	padding: 3%;
+	background: #fff;
+
+	.cont {
+		@import './cont-1';
+		@import './projects';
+	}
+}
+
+@import './contact';
