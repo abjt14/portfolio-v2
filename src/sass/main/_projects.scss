@@ -36,8 +36,10 @@ $listingItemTechFontWeight: 300;
 			&:hover {
 				a.item {
 					> * {
-						opacity: .2;
-						filter: blur(3px);
+						@media screen and (min-width: 640px) {
+							opacity: .2;
+							filter: blur(3px);
+						}
 					}
 				}
 			}
@@ -75,9 +77,11 @@ $listingItemTechFontWeight: 300;
 
 				&:hover {
 					> * {
-						opacity: 1;
-						color: #616161;
-						filter: blur(0px);
+						@media screen and (min-width: 640px) {
+							opacity: 1;
+							color: #616161;
+							filter: blur(0px);
+						}
 					}
 				}
 			}
