@@ -75,8 +75,10 @@ if (window.innerWidth > 640) {
 		// hide/show go to top
 		if (offset > .90) {
 			document.querySelector('#go-to-top').classList.add('hc-hide')
+			// document.querySelector('.hot-corner.hc-top-left .bg').classList.add('hc-hide')
 		} else {
 			document.querySelector('#go-to-top').classList.remove('hc-hide')
+			// document.querySelector('.hot-corner.hc-top-left .bg').classList.remove('hc-hide')
 		}
 		// hide/show go to top end
 	})
