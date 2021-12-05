@@ -98,10 +98,11 @@ $listingItemTechFontWeight: 300;
 				letter-spacing: -0.7rem;
 				text-align: right;
 				width: 100%;
-				line-height: 7rem;
+				line-height: 7.25rem;
+				transform: translateX(-2px);
 
 				> * {
-					padding-right: 0.25rem;
+					padding-right: 0.35rem;
 				}
 
 				span {

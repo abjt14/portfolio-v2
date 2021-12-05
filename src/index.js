@@ -11,20 +11,20 @@ if (window.innerWidth > 640) {
 
 	timelineInit
 	.to('#cont-1 .title > span', { duration: 0, autoAlpha: 0, y: '10vh', rotate: 0.01 })
-	.to('#cont-1 .content .sub-title', { duration: 0, autoAlpha: 0, y: '10vh', rotate: 0.01 })
 	.to('#cta-emoji', { duration: 0, autoAlpha: 0 })
 	.to('#cta-text', { duration: 0, autoAlpha: 0 })
 	.to('#cta-btn', { duration: 0, boxShadow: '0px 0px 0px 0px #adadad' })
 	.to('#cta-foreground', { duration: 0, width: '0%' })
 	.to('.gsap-hc', { duration: 0, autoAlpha: 0.001 })
+	.to('#cont-1 .content .sub-title', { duration: 0, autoAlpha: 0.001 })
 	.to('#cont-1 .title span', { duration: .7, delay: .5, stagger: .115, ease: 'power1.out', autoAlpha: 1, y: 0, rotate: 0.01 })
-	.to('#cont-1 .content .sub-title', { duration: .7, delay: .15, ease: 'power1.out', autoAlpha: 1, y: 0, rotate: 0.01 }, '-=.7')
 	.to('#cta-foreground', { duration: .25, width: '100%' })
 	.to('#cta-emoji', { duration: 0, autoAlpha: 1 })
 	.to('#cta-text', { duration: 0, autoAlpha: 1 })
 	.to('#cta-btn', { duration: 0, boxShadow: '0px 0px 0px 1.5px #000' })
 	.to('#cta-foreground', { duration: .5, left: '100%', width: '0%', })
 	.to('.gsap-hc', { duration: 1, autoAlpha: 1 })
+	.to('#cont-1 .content .sub-title', { duration: 1, autoAlpha: 1 }, '-=1')
 	// gsap init desktop end
 
 
@@ -71,16 +71,9 @@ if (window.innerWidth > 640) {
 	// scroll button hide
 	document.addEventListener('scroll', (e) => {
 		let offset = window.scrollY / document.body.offsetHeight
-		// hide/show scroll clue
-		if (offset > .11) {
-			document.querySelector('#go-to-projects').classList.add('hc-hide')
-		} else {
-			document.querySelector('#go-to-projects').classList.remove('hc-hide')
-		}
-		// hide/show scroll clue end
 
 		// hide/show go to top
-		if (offset > .97) {
+		if (offset > .90) {
 			document.querySelector('#go-to-top').classList.add('hc-hide')
 		} else {
 			document.querySelector('#go-to-top').classList.remove('hc-hide')
