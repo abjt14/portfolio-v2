@@ -26,7 +26,6 @@ if (window.innerWidth > 640) {
 
 
 
-
 	// customouse
 	customouseInit()
 	// customouse end
@@ -47,7 +46,7 @@ if (window.innerWidth > 640) {
 	})
 
 	document.querySelectorAll('#projects .content .listing a.item').forEach(element => {
-		const imageName = element.querySelector('.number').innerText + '.png';
+		const imageName = element.querySelector('.number').innerText + '.webp';
 
 		element.addEventListener('mouseenter', (e) => {
 			document.querySelector('#projects-img-cont img').setAttribute('src', `./src/images/projects/${imageName}`)
@@ -65,53 +64,6 @@ if (window.innerWidth > 640) {
 
 
 
-	// scroll button hide
-	document.addEventListener('scroll', (e) => {
-		let offset = window.scrollY / document.body.offsetHeight
-
-		// hide/show go to top
-		if (offset > .90) {
-			document.querySelector('#go-to-top').classList.add('hc-hide')
-			// document.querySelector('.hot-corner.hc-top-left .bg').classList.add('hc-hide')
-		} else {
-			document.querySelector('#go-to-top').classList.remove('hc-hide')
-			// document.querySelector('.hot-corner.hc-top-left .bg').classList.remove('hc-hide')
-		}
-		// hide/show go to top end
-	})
-	// scroll button hide end
-
-
-
-	// gsap hot corners mouse interaction
-	document.querySelectorAll('.hot-corner button').forEach(element => {
-		element.addEventListener('mouseenter', (e) => {
-			gsap.to('#dot', { duration: .1, height: '4rem', width: '4rem', ease: 'power1.out' })
-		})
-		element.addEventListener('mouseleave', (e) => {
-			gsap.to('#dot', { duration: .1, height: '.7rem', width: '.7rem', ease: 'power1.out' } )
-		})
-	});
-	document.querySelectorAll('.hot-corner a').forEach(element => {
-		element.addEventListener('mouseenter', (e) => {
-			gsap.to('#dot', { duration: .1, height: '4rem', width: '4rem', ease: 'power1.out' })
-		})
-		element.addEventListener('mouseleave', (e) => {
-			gsap.to('#dot', { duration: .1, height: '.7rem', width: '.7rem', ease: 'power1.out' } )
-		})
-	});
-	document.querySelectorAll('.social-links a').forEach(element => {
-		element.addEventListener('mouseenter', (e) => {
-			gsap.to('#dot', { duration: .1, height: '4rem', width: '4rem', ease: 'power1.out' })
-		})
-		element.addEventListener('mouseleave', (e) => {
-			gsap.to('#dot', { duration: .1, height: '.7rem', width: '.7rem', ease: 'power1.out' } )
-		})
-	});
-	// gsap hot corners mouse interaction end
-
-
-
 	// contact container parallax
 	gsap.to('.gsap-parallax', { duration: 0, y: document.body.scrollHeight*.7 })
 
@@ -121,7 +73,7 @@ if (window.innerWidth > 640) {
 	})
 	// contact container parallax end
 } else {
-	// gsap init desktop
+	// gsap init mobile
 	let timelineInit = gsap.timeline()
 
 	timelineInit
@@ -133,5 +85,5 @@ if (window.innerWidth > 640) {
 	.to('#cont-1 .mobile-title', { duration: 1, stagger: .115, ease: 'back.out(1)', autoAlpha: 1, y: 0, rotate: 0.01 })
 	.to('#contact', { duration: 1, ease: 'back.out(1)', yPercent: 0 }, "-=.75")
 	.to('html', { duration: 0, overflowY: 'auto' })
-	// gsap init desktop end
+	// gsap init mobile end
 }
