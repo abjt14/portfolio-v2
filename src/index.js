@@ -15,15 +15,13 @@ if (window.innerWidth > 640) {
 	.to('#cta-text', { duration: 0, autoAlpha: 0 })
 	.to('#cta-btn', { duration: 0, boxShadow: '0px 0px 0px 0px #adadad' })
 	.to('#cta-foreground', { duration: 0, width: '0%' })
-	.to('.gsap-hc-2', { duration: 0, autoAlpha: 0.001 })
-	.to('.gsap-hc', { duration: 1, autoAlpha: 1, delay: .5 })
-	.to('#cont-1 .title span', { duration: 1, stagger: .115, ease: 'back.out(1)', autoAlpha: 1, y: 0, rotate: 0.01 })
+	.to('.gsap-hc', { duration: 1, autoAlpha: 1, delay: .25 })
+	.to('#cont-1 .title span', { duration: 1, stagger: .115, ease: 'back.out(1)', autoAlpha: 1, y: 0, rotate: 0.01 }, "-=.5")
 	.to('#cta-foreground', { duration: .25, width: '100%' })
 	.to('#cta-emoji', { duration: 0, autoAlpha: 1 })
 	.to('#cta-text', { duration: 0, autoAlpha: 1 })
 	.to('#cta-btn', { duration: 0, boxShadow: '0px 0px 0px 1.5px #000' })
 	.to('#cta-foreground', { duration: .5, left: '100%', width: '0%', })
-	.to('.gsap-hc-2', { duration: 1, autoAlpha: 1 })
 	// gsap init desktop end
 
 
@@ -130,8 +128,10 @@ if (window.innerWidth > 640) {
 	.to('html', { duration: 0, overflowY: 'hidden' })
 	.to('.gsap-hc', { duration: 0, autoAlpha: 0.001 })
 	.to('#cont-1 .mobile-title', { duration: 0, autoAlpha: 0, y: '10vh', rotate: 0.01 })
+	.to('#contact', { duration: 0, yPercent: 25 })
 	.to('.gsap-hc', { duration: 1, delay: .5, autoAlpha: 1 })
 	.to('#cont-1 .mobile-title', { duration: 1, stagger: .115, ease: 'back.out(1)', autoAlpha: 1, y: 0, rotate: 0.01 })
+	.to('#contact', { duration: 1, ease: 'back.out(1)', yPercent: 0 }, "-=.75")
 	.to('html', { duration: 0, overflowY: 'auto' })
 	// gsap init desktop end
 }
