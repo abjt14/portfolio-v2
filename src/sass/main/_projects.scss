@@ -33,17 +33,6 @@ $listingItemTechFontWeight: 300;
 		.listing {
 			z-index: 2;
 
-			&:hover {
-				a.item {
-					> * {
-						@media screen and (min-width: 640px) {
-							opacity: .2;
-							filter: blur(3px);
-						}
-					}
-				}
-			}
-
 			a.item {
 				display: flex;
 				justify-content: flex-start;
@@ -72,16 +61,6 @@ $listingItemTechFontWeight: 300;
 						gap: 1rem;
 						font-size: $listingItemTechFontSize;
 						font-weight: $listingItemTechFontWeight;
-					}
-				}
-
-				&:hover {
-					> * {
-						@media screen and (min-width: 640px) {
-							opacity: 1;
-							color: #616161;
-							filter: blur(0px);
-						}
 					}
 				}
 			}
@@ -122,17 +101,6 @@ $listingItemTechFontWeight: 300;
 						}
 					}
 				}
-
-				@media only screen and (max-width: 640px) {
-					font-size: 4.5rem;
-					text-align: center;
-					line-height: 1;
-					letter-spacing: -0.3rem;
-				}
-			}
-
-			@media only screen and (max-width: 640px) {
-				order: -1;
 			}
 		}
 
@@ -156,19 +124,10 @@ $listingItemTechFontWeight: 300;
 				border-radius: 4px;
 				min-height: 10vh;
 			}
-
-			@media only screen and (max-width: 640px) {
-				display: none;
-			}
-		}
-
-		@media only screen and (max-width: 640px) {
-			flex-direction: column;
 		}
 	}
 
 	@media only screen and (max-width: 640px) {
-		min-height: auto;
-		padding: 10rem 0;
+		display: none;
 	}
 }

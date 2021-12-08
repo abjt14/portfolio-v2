@@ -1,10 +1,15 @@
 #main {
 	padding: 3%;
 	background: #fff;
+	min-height: 100vh;
 
 	.cont {
 		@import './cont-1';
 		@import './projects';
+	}
+
+	@media only screen and (max-width: 640px) {
+		min-height: 75vh;
 	}
 }
 

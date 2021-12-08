@@ -76,7 +76,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="hot-corner hc-top-left">
+	<div class="hot-corner-absolute hc-top-left">
 		<button id="go-to-top" class="gsap-hc" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
 			ABHIJEET SINGH
 		</button>
@@ -84,6 +84,20 @@
 	<div class="hot-corner-absolute hc-top-right">
 		<div id="portfolio-text" class="gsap-hc">
 			PORTFOLIO@21
+		</div>
+	</div>
+	<div class="hot-corner-absolute hc-bottom-left">
+		<h2 class="sub-title gsap-hc">
+			Developer based in Vancouver
+		</h2>
+	</div>
+	<div class="hot-corner-absolute hc-bottom-right">
+		<div id="cta-btn-cont">
+			<a id="cta-btn" href="mailto:abhijeetsinghmain@gmail.com">
+				<div id="cta-emoji">👋</div>
+				<span id="cta-text">Say Hi!</span>
+				<img id="cta-foreground" src="./src/images/cta-btn/foreground.svg" alt="" loading="lazy">
+			</a>
 		</div>
 	</div>
 	<div id="main">
@@ -106,18 +120,6 @@
 				<span>Experiences</span>
 				for my audience
 			</h1>
-			<div class="content">
-				<h2 class="sub-title">
-					Developer based in Vancouver
-				</h2>
-				<div id="cta-btn-cont">
-					<a id="cta-btn" href="mailto:abhijeetsinghmain@gmail.com">
-						<div id="cta-emoji">👋</div>
-						<span id="cta-text">Say Hi!</span>
-						<img id="cta-foreground" src="./src/images/cta-btn/foreground.svg" alt="" loading="lazy">
-					</a>
-				</div>
-			</div>
 		</div>
 		<div class="cont" id="projects">
 			<div class="content">
@@ -229,12 +231,7 @@
 	<script>
 		window.addEventListener('DOMContentLoaded', (e) => {
 			document.body.classList.remove('loading')
-			document.querySelector('#cont-1').style.height = `${window.innerHeight}px`
 		});
-
-		window.addEventListener('resize', (e) => {
-			document.querySelector('#cont-1').style.height = `${window.innerHeight}px`
-		})
 	</script>
 </body>
 
