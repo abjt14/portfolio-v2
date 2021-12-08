@@ -56,6 +56,19 @@ if (window.innerWidth > 640) {
 
 
 
+	// gsap link mouse interaction
+	document.querySelectorAll('.social-links a').forEach(element => {
+		element.addEventListener('mouseenter', (e) => {
+			gsap.to('#dot', { duration: .1, height: '4rem', width: '4rem', ease: 'power1.out' })
+		})
+		element.addEventListener('mouseleave', (e) => {
+			gsap.to('#dot', { duration: .1, height: '.7rem', width: '.7rem', ease: 'power1.out' } )
+		})
+	});
+	// gsap link mouse interaction end
+
+
+
 	// magnetize
 	window.addEventListener('DOMContentLoaded', (e) => {
 		new MagneticElement('a#cta-btn');
